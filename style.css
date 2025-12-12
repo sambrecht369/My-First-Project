@@ -9,6 +9,8 @@
     max-width: 2000px;
 }
 
+
+
 /* Navigation Bar */
 nav{
     height: 70px;
@@ -21,7 +23,7 @@ nav{
 }
 
 a{
-    color: lightblue;
+    color: blue;
     font-size: 2vh;
     font-weight: 500;
 }
@@ -59,7 +61,7 @@ header{
 
 h1{
     font-size: 6vh;
-    color: lightblue;
+    color: blue;
     font-weight: 700;
     margin: 0 0 16px 0;
     padding-right: 20px;
@@ -85,12 +87,12 @@ button{
 
 
 .section{
-    width: 100%;
-    max-width: 900px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
+    width: 100%;
+    max-width: 900px;
 }
 
 
@@ -138,7 +140,6 @@ img {
 }  
 
 
-
 /* About Section */
 
 #about{
@@ -150,42 +151,46 @@ img {
 
 
 /* Gallery Section */
-#gallery{
-    padding: 48px 50px;
-    background:linear-gradient(#98F5F9,#E99FFE);
-
-}
-
-#gallery .images {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: space-around;
-    width: 100%;
-}
-
-
-
-#gallery .images img {
-    border-radius: 12px;
-    justify-content: space-between;
-    height: 150px;
-    width: 180px;
-    min-width: 180px;
-}
-
-.ul {
-    display: flex;
-    gap: 20px;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    max-width: 500px;
-}   
 
 .container {
-    width: 1000px;
-    height: 324px;
-    margin: 0 24px;
+    padding: 50px 0;
+    margin: 50px;
 }
+
+.axolotl__img {
+    width: 100%;
+    max-width: 250px;
+}
+.axolotl {
+    width: 25%;
+}
+.axolotl__img--wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.axolotl__list {
+    display: flex;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Contact Us Section */
@@ -233,73 +238,3 @@ footer {
     font-size: 2.25vh;
 }
 
-
-
-
-
-/* Responsive Design */
-
-
-/*Phones and small tablets*/
-
-@media (max-width: 728px) {
-   .section {
-    flex-direction: column;
-   }
-
-
-.home__description {
-    margin-bottom: 24px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.home__description--button {
-    max-width: 240px;
-}
-
-h1{
-     text-align: center;
-     font-size: 60px;
-}
-.subheader{
-    text-align: center;
-    font-size: 28px;
-}
-
-nav { 
-    display: none;
-}
-
-.section__description {
-    flex-direction: column;
-}
-
-.section__description--wrapper{
-    width: 100%;
-}
-
-.about__image--wrapper {
-    width: 100%;
-}
-
-#home .section__description {
-    flex-direction: column-reverse;
-}
-
-.section{
-    flex-direction: column;
-}
-
-.footer {
-    padding: 24px 0;}
-.footer__nav{
-padding: 0 3px;
-font-size: 15px;
-}
-
-.footer__credit {
-    text-align: center;
-}
-}
