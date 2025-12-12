@@ -52,7 +52,7 @@ ul{ display: flex;
 
 header{
     background:linear-gradient(#E99FFE, #98F5F9);
-    height: calc(100VH-70px);
+    height: calc(100vh-70px);
     padding: 24px; 
     display: flex;
     align-items: center;
@@ -163,38 +163,24 @@ img {
 }
 .axolotl {
     width: 25%;
+    display: flex;
+    gap: 16px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    width: 100%;
 }
 .axolotl__img--wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    flex-wrap: nowrap;
-    overflow-x: auto;
+   flex: 0 0 auto;
 }
 
 .axolotl__list {
     display: flex;
-    
+    width: 100%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Contact Us Section */
 
@@ -240,4 +226,3 @@ footer {
    padding: 0 16px;
     font-size: 2.25vh;
 }
-
