@@ -162,19 +162,26 @@ img {
     max-width: 250px;
 }
 .axolotl {
-    width: 25%;
-    display: flex;
-    gap: 16px;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    width: 100%;
+display: flex;
+gap: 16px;
+flex-wrap: wrap;
+width: 100%;
+justify-content: center;
 }
+
 .axolotl__img--wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-   flex: 0 0 auto;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: center;
+text-align: center;
+gap: 8px;
+flex: 0 0 250px;
+}
+
+.axolotl__name {
+display: block;
+font-size: 2vh;
 }
 
 .axolotl__list {
