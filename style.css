@@ -9,6 +9,10 @@
     max-width: 2000px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 h2 {
     font-size: large;
 }
@@ -188,6 +192,7 @@ align-items: center;
 text-align: center;
 gap: 8px;
 flex: 0 0 250px;
+width: calc(100%/3);
 }
 
 .axolotl__name {
@@ -202,7 +207,7 @@ transform: scale(0);
 
 .axolotl__list {
     display: flex;
-    width: 100%;
+    justify-content: center;
 }
 
 
@@ -223,15 +228,13 @@ transform: scale(0);
 }
 
 .popular__img {
-    width: 100%;
-  max-width: 250px;
+    width: calc(100/3);
   transition: all 500ms ease;
-  background-color: blue;
 }
 
 .popular__wrapper {
     display: flex;
-    max-width: 250px;
+    width: calc(100%/3);
     box-shadow: 0 0px 80px blue;
     border-radius: 20px;
     overflow: hidden;
@@ -239,7 +242,7 @@ transform: scale(0);
     margin: 20px;
 }
 
-.popular__wrapper::before  {
+.popular__wrapper:before  {
     content: "";
     position: absolute;
     top: 0;
@@ -252,12 +255,10 @@ transform: scale(0);
     z-index: 2;
 }
 
-.popular__wrapper:hover .popular__wrapper::before {
+.popular__wrapper:hover {
     background-color: blue;
     opacity: 40%;
 }
-
-
 
 .popular__wrapper:hover .popular__img {
     transform: scale(1.07);
@@ -367,4 +368,71 @@ footer {
 .footer__anchor:hover .footer__logo--popper {
     transform: translateX(30px);
     opacity: 1;
+}
+
+
+
+/*RESPONSIVE DESIGN*/
+
+
+/*Smaller Screens*/
+
+@media (max-width:480px) {
+
+li:not(:last-child) {
+    display:none;
+}
+li :last-child {
+    background-color: blue;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    font-weight: 600;
+}
+
+.box1 {
+    max-width: 300px;
+    padding-top: 20px;
+}
+.section{
+    flex-direction: column;
+    text-align: center;
+}
+figcaption {
+    display: none;
+}
+h2 {
+    padding: -50px;
+}
+.section__description--wrapper {
+    font-weight: 600;
+    font-size: 60px;
+}
+.section__img--wrapper {
+    width: 300px;
+    padding: 20px;
+}
+
+.axolotl__img{
+    width: calc(100%/2);
+}
+
+.axolotl {
+   display: flex;
+  
+}
+.axolotl__img--wrapper {
+    
+}
+.axolotl__list{
+    
+}
+
+.popular__img {
+   
+}
+
+.popular__wrapper {
+   
+
 }
