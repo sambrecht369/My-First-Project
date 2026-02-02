@@ -5,18 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Axolotl World</title>
     <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/478a2fb00a.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
 </head>
 <body>
     <section>
 <nav>
 <img src="https://as1.ftcdn.net/v2/jpg/06/99/86/50/1000_F_699865028_24MqBW9dRe7M2pZefxZM1s1beG8wB2jU.jpg" class="logo" alt="Axolotl" />
-<ul>
+<ul class="nav__links">
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#gallery">Gallery</a></li>
     <li><a href="#populars">Most Popular</a></li>
     <li><a href="#contact">Contact</a></li>
 </ul>
+<button class="menu__btn" onclick="openMenu()">
+    <i class="fa-solid fa-bars"></i>
+</button>
+<div class="menu__backdrop">
+    <button class="menu__close--btn" onclick="closeMenu()">
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+    <div class="menu__links">
+        <a href="#home" class="menu__link" onclick="closeMenu()">Home</a>
+        <a href="#about" class="menu__link" onclick="closeMenu()">About</a>
+        <a href="#gallery" class="menu__link" onclick="closeMenu()">Gallery</a>
+        <a href="#populars" class="menu__link" onclick="closeMenu()">Most Popular</a>
+        <a href="#contact" class="menu__link" onclick="closeMenu()">Contact</a>
+    </div>
+</div>
 </nav>
     </section>
 <header>
@@ -27,7 +44,7 @@
         <button class="home__description--button">Explore More</button>
     </div>
     <figure class="box1">
-        <img src="https://th.bing.com/th/id/OIP.9L-kdMcHr9RaQ8NrFVC2xAHaEO?w=281&h=180&c=7&r=0&o=7&dpr=1.4&pid=1.7&rm=3" alt="Axolotl Image" />
+        <img class="img" src="https://th.bing.com/th/id/OIP.9L-kdMcHr9RaQ8NrFVC2xAHaEO?w=281&h=180&c=7&r=0&o=7&dpr=1.4&pid=1.7&rm=3" alt="Axolotl Image" />
         <figcaption>Axolotl in its natural habitat</figcaption> 
     </figure>
     </div>
@@ -39,16 +56,16 @@
     <section id="home">
 <h2>Home</h2>
 <div class="section"> 
+    <div class="section__description">
         <div class="section__description--wrapper">
         <p class="section__description--para">Axolotls are fascinating amphibians known for their unique ability to regenerate limbs and retain their larval features throughout their lives. They are native to lakes underlying Mexico City and are often referred to as "Mexican walking fish," although they are not fish but amphibians.</p>
         <p class="section__description--para">Axolotls have a distinctive appearance with feathery external gills, a wide head, and a smiling face. They come in various colors, including wild-type (dark with speckles), leucistic (pale pink with red eyes), albino, golden albino, and melanoid (completely dark).</p>
         </div>
-     <div class="section__description">
-    <figure class="section__img--wrapper">
-         <img src="https://th.bing.com/th/id/OIP.9PV_Qt2xMvjVZDEvVP8DnQHaEK?w=266&h=180&c=7&r=0&o=7&dpr=1.4&pid=1.7&rm=3" alt="Axolotl Close-up" />
-         <figcaption>Close-up of an Axolotl</figcaption>
-    </figure>
-     </div>
+        <figure class="section__img--wrapper">
+            <img class="img" src="https://th.bing.com/th/id/OIP.9PV_Qt2xMvjVZDEvVP8DnQHaEK?w=266&h=180&c=7&r=0&o=7&dpr=1.4&pid=1.7&rm=3" alt="Axolotl Close-up" />
+            <figcaption>Close-up of an Axolotl</figcaption>
+        </figure>
+    </div>
 </div>
 </section>
 
@@ -57,14 +74,15 @@
 <div class="section">
     <div class="section__description">
     <figure class="section__img--wrapper">
-        <img src="https://th.bing.com/th/id/OIP.QKhbph3isKZz-lmZsYm0lgHaE8?w=248&h=180&c=7&r=0&o=7&dpr=1.4&pid=1.7&rm=3" alt="Axolotl Habitat"/>
+        <img class="img" src="https://th.bing.com/th/id/OIP.QKhbph3isKZz-lmZsYm0lgHaE8?w=248&h=180&c=7&r=0&o=7&dpr=1.4&pid=1.7&rm=3" alt="Axolotl Habitat"/>
         <figcaption>Axolotl in Captivity</figcaption>  
     </figure>
-    </div>
+   
         <div class="section__description--wrapper">
         <p class="section__description--para">Axolotls are critically endangered in the wild due to habitat loss and pollution. However, they are popular in the pet trade and scientific research due to their regenerative capabilities. Axolotls can regenerate not only limbs but also spinal cord, heart, and other organs, making them a subject of interest for medical research.</p>
         <p class="section__description--para">In captivity, axolotls require specific care, including cool water temperatures, a proper diet of live or frozen foods, and a spacious tank with hiding spots. They are generally peaceful creatures but can be cannibalistic if housed together without enough space or food.</p>
         </div> 
+     </div>
 </div>
 </section>
 
@@ -72,7 +90,7 @@
 <section id="gallery">
 <div class="container">
     <div class="row">  
-        <h2>Gallery</h2>Need to Fix
+        <h2>Gallery</h2>
         <div class="axolotl__list">
             <div class="axolotl">
                 <figure class="axolotl__img--wrapper">

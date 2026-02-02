@@ -17,7 +17,10 @@ h2 {
     font-size: large;
 }
 
-/* Navigation Bar */
+
+
+/********************************** Navigation Bar **********************************/
+
 nav{
     height: 70px;
     display: flex;
@@ -31,7 +34,15 @@ a{
     color: blue;
     font-size: 2vh;
     font-weight: 500;
+    text-decoration: none;
+    transition: all 300ms ease;
 }
+
+a:hover{
+    color: darkblue;
+    border-bottom: 2px solid darkblue;
+}
+
 .logo{
     height: 50px;
     width: 50px;
@@ -51,9 +62,75 @@ ul{ display: flex;
     border-radius: 12px;
 }
 
+.row {
+    padding: 0 20px;
+    max-width: 1200px;
+}
+
+/************************************Menu Button********************************/
+
+.menu__btn {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    color: blue;
+    cursor: pointer;
+    display: none;
+
+}
+.menu__close--btn {
+    background-color: transparent;
+    border: none;
+    font-size: 32px;
+    color: blue;
+    cursor: pointer;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+.menu__backdrop {
+    position: absolute;
+    background: linear-gradient(#E99FFE, #98F5F9);
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    opacity: 0;
+    visibility: hidden;
+    transition: all 300ms ease;
+}
+
+.menu--open .menu__backdrop {
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+}
+
+.menu--open {
+    max-height: 100vh;
+    overflow-y: hidden;
+}
+.menu__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.menu__link {
+    font-size: 24px;
+}
 
 
-/* Header Section */
+
+
+/*********************************** Header Section ************************************/
 
 header{
     background:linear-gradient(#E99FFE, #98F5F9);
@@ -98,10 +175,11 @@ button{
     margin: 0 auto;
     width: 100%;
     max-width: 900px;
+    padding: 0 24px;
 }
 
 
-/* Home Section */
+/********************************* Home Section ***************************************/
 
 #home,#about,#gallery,#footer{
     padding: 48px 0;
@@ -120,12 +198,14 @@ h2{
     align-items: center;
 }
 
-img {
-    width: 100%;
+.img {
+    max-width: 100%; 
+  
 }
+
 .img--wrapper,
 .section__description--wrapper {
-    width: 60%;
+    max-width: 60%;
     padding: 0 24px;
 }
 
@@ -145,7 +225,7 @@ img {
 }  
 
 
-/* About Section */
+/*********************************** About Section **********************************/
 
 #about{
     padding: 48px 0;
@@ -155,7 +235,7 @@ img {
 
 
 
-/* Gallery Section */
+/************************************ Gallery Section *****************************/
 
 .container {
     padding: 50px 0;
@@ -167,6 +247,7 @@ img {
     max-width: 250px;
     border-radius: 10%;
     transition: all 300ms;
+    max-height: 170px;
 }
 
 .axolotl__img:hover {
@@ -211,7 +292,7 @@ transform: scale(0);
 }
 
 
-/*Most Popular*/
+/*************************************Most Popular**************************************/
 
 .container {
     margin-top: -30px;
@@ -225,11 +306,15 @@ transform: scale(0);
 .popular {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 16px;
+    
 }
 
 .popular__img {
-    width: calc(100/3);
-  transition: all 500ms ease;
+    width: 100%;
+    transition: all 500ms ease;
 }
 
 .popular__wrapper {
@@ -240,6 +325,9 @@ transform: scale(0);
     overflow: hidden;
     position: relative;  
     margin: 20px;
+    max-height: 300px;
+    max-width: 300px;
+    flex: 0 0 250px;
 }
 
 .popular__wrapper:before  {
@@ -273,6 +361,7 @@ transform: scale(0);
 
 .popular__list {
     padding-top: 20px;
+
 }
 
 .popular__description {
@@ -301,7 +390,7 @@ transform: scale(0);
 }
 
 
-/* Contact Us Section */
+/****************************** Contact Us Section ******************************/
 
 #contact {
     padding: 48px 0;
@@ -330,7 +419,7 @@ input, textarea {
 
 
 
-/* Footer Section */
+/********************************** Footer Section ***********************************/
 
 footer {
     background: linear-gradient(#E99FFE,#98F5F9);
@@ -372,22 +461,19 @@ footer {
 
 
 
-/*RESPONSIVE DESIGN*/
+/************************************RESPONSIVE DESIGN***********************************/
 
 
-/*Smaller Screens*/
+
+/*******Smaller Screens************/
 
 @media (max-width:480px) {
 
-li:not(:last-child) {
-    display:none;
+.nav__links {
+    display: none;
 }
-li :last-child {
-    background-color: blue;
-    border-radius: 10px;
-    padding: 10px;
-    color: white;
-    font-weight: 600;
+.menu__btn {
+    display: block;
 }
 
 .box1 {
@@ -405,7 +491,6 @@ h2 {
     padding: -50px;
 }
 .section__description--wrapper {
-    font-weight: 600;
     font-size: 60px;
 }
 .section__img--wrapper {
@@ -414,10 +499,15 @@ h2 {
 }
 
 .axolotl__img{
-    width: calc(100%/2);
+    width: 100% ;
 }
 
 .axolotl {
    display: flex;
 }
+
+.img {
+    max-width: 100%;
+}
+
 }
